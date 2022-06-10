@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.gp2.calcalories.ui.fragments.auth.LaunchFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_auth_launch">
+        <argument
+            android:name="isAboutPage"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <action
+            android:id="@+id/navigateToLoginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <action
+        android:id="@+id/navigateToLaunchFragment"
+        app:destination="@id/launchFragment" />
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.gp2.calcalories.ui.fragments.auth.LoginFragment"
+        android:label="@string/sign_in"
+        tools:layout="@layout/fragment_auth_login" >
+        <action
+            android:id="@+id/navigateToRegisterFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.gp2.calcalories.ui.fragments.auth.RegisterFragment"
+        android:label="@string/sign_up"
+        tools:layout="@layout/fragment_auth_register"/>
+
+    <fragment
+        android:id="@+id/planFragment"
+        android:name="com.gp2.calcalories.ui.fragments.home.PlansFragment"
+        android:label="@string/diary"
+        tools:layout="@layout/fragment_plans" >
+    </fragment>
+    <action
+        android:id="@+id/navigateToPlanFragment"
+        app:destination="@id/planFragment" />
+
+    <fragment
+        android:id="@+id/planAddMealFragment"
+        android:name="com.gp2.calcalories.ui.fragments.recipes.PlanAddMealFragment"
+        android:label="@string/add_meal"
+        tools:layout="@layout/fragment_plan_add_meal">
+        <argument
+            android:name="plan_id"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/navigateToPlanAddMealFragment"
+        app:destination="@id/planAddMealFragment" />
+
+    <dialog
+        android:id="@+id/planAddMealDialog"
+        android:name="com.gp2.calcalories.ui.fragments.recipes.PlanAddMealDialog"
+        android:label="@string/add_meal"
+        tools:layout="@layout/fragment_plan_add_meal">
+        <argument
+            android:name="recipe"
+            app:argType="com.gp2.calcalories.remote.model.meal.entity.MealRecipe"
+            app:nullable="true" />
+    </dialog>
+    <action
+        android:id="@+id/navigateToPlanAddMealDialog"
+        app:destination="@id/planAddMealDialog" />
+
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.gp2.calcalories.ui.fragments.home.ProgressFragment"
+        android:label="@string/progress"
+        tools:layout="@layout/fragment_progress" />
+
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.gp2.calcalories.ui.fragments.home.RecipesFragment"
+        android:label="@string/recipes"
+        tools:layout="@layout/fragment_recipes"/>
+
+
+    <fragment
+        android:id="@+id/recipesSearchFragment"
+        android:name="com.gp2.calcalories.ui.fragments.recipes.RecipesSearchFragment"
+        android:label="@string/recipes"
+        tools:layout="@layout/fragment_notification_recipes" >
+        <argument
+            android:name="ids"
+            app:argType="string" />
+        <argument android:name="needResult"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <action
+        android:id="@+id/navigateToRecipesSearchFragment"
+        app:destination="@id/recipesSearchFragment" />
+
+    <dialog
+        android:id="@+id/recipeDialog"
+        android:name="com.gp2.calcalories.ui.fragments.recipes.RecipeDialog"
+        android:label="@string/recipes"
+        tools:layout="@layout/fragment_recipe" >
+        <argument
+            android:name="mealRecipe"
+            app:argType="com.gp2.calcalories.remote.model.meal.entity.MealRecipe" />
+    </dialog>
+    <action
+        android:id="@+id/navigateToRecipeDialog"
+        app:destination="@id/recipeDialog" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.gp2.calcalories.ui.fragments.home.NotificationsFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notifications"/>
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.gp2.calcalories.ui.fragments.home.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_home_profile" >
+        <action
+            android:id="@+id/navigateToEditAccountFragment"
+            app:destination="@id/editAccountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editAccountFragment"
+        android:name="com.gp2.calcalories.ui.fragments.settings.EditAccountFragment"
+        android:label="@string/edit_account"
+        tools:layout="@layout/fragment_setting_edit_account" />
+
+    <fragment
+        android:id="@+id/editDetailsFragment"
+        android:name="com.gp2.calcalories.ui.fragments.settings.EditDetailsFragment"
+        android:label="@string/personal_details"
+        tools:layout="@layout/fragment_setting_edit_details" />
+    <action
+        android:id="@+id/navigateToEditDetailsFragment"
+        app:destination="@id/editDetailsFragment" />
+
+
+</navigation>

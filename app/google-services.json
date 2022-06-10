@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "81203155349",
+    "project_id": "calcalories-757d1",
+    "storage_bucket": "calcalories-757d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81203155349:android:bb399f1ac546010834a69c",
+        "android_client_info": {
+          "package_name": "com.gp2.calcalories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81203155349-5jp0lv59qjb490j0q2uqddaqaii4fjnu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gp2.calcalories",
+            "certificate_hash": "3a7dd3aed5fabc39f66e5b185e50c4cddf1f943d"
+          }
+        },
+        {
+          "client_id": "81203155349-77l46og9l6f6b2rbujv02aijf04v4d0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gp2.calcalories",
+            "certificate_hash": "ee725cef03d197c9eeb31354d9b24e9b93458d9b"
+          }
+        },
+        {
+          "client_id": "81203155349-b8gnm669u7s1gftphfncqq4ghb8agt6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-8flOS5aFQguNT3bGVauKUeg5GOC1sm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81203155349-b8gnm669u7s1gftphfncqq4ghb8agt6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
